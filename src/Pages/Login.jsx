@@ -36,7 +36,8 @@ const LoginForm = () => {
     // Save user data along with expiry time in localStorage
     localStorage.setItem('CompositSaData', JSON.stringify({ ...data}));     
     localStorage.setItem('Satoken', data.token); 
-    navigate('/pofile')
+    navigate('/')
+    window.location.reload();
       }
     } catch (error) {
       console.error("Error:", error.message);

@@ -40,6 +40,7 @@ const Navbar = () => {
       localStorage.clear();
       console.log("User LoggedOut SAuccessFully")
       navigate('/')
+      window.location.reload();
     }
     
   } catch (error) {
@@ -66,31 +67,43 @@ const Navbar = () => {
               Home
             </Link>
             <Link
+                          className="text-gray-100 hover:text-[#c29a66] font-medium active:text-[#c29a66]"
+
               to={"/about"}
-              className="text-gray-100 hover:text-[#c29a66] font-medium active:text-[#c29a66]"
             >
               About
             </Link>
+            {/* <Link
+              to="/"
+              className="text-gray-100 hover:text-[#c29a66] font-medium active:text-[#c29a66]"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/", { state: { scrollTo: "about" } }); // Pass scroll target as state
+              }}
+            >
+              About
+            </Link> */}
             
            
-            <Link
+          {isLoggedIn &&  <Link
               to={"/registrations"}
               className="text-gray-100 hover:text-[#c29a66] font-medium"
             >
               My Registrations
-            </Link>
+            </Link>}
+
             <Link
               to={"/contact"}
               className="text-gray-100 hover:text-[#c29a66] font-medium"
             >
               Contact
             </Link>
-            <Link
+            {isLoggedIn && <Link
               to={"/profile"}
               className="text-gray-100 hover:text-[#c29a66] font-medium"
             >
               Profile
-            </Link>
+            </Link>}
           </div>
           <div className="hidden md:flex space-x-8">
 

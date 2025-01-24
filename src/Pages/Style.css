@@ -1,0 +1,90 @@
+.profile {
+    /* background-color: rgb(3, 29, 67); */
+    border-radius:10px;
+    justify-content: center;
+    align-items: self-start;
+    /* background-color: red; */
+    width: fit-content;
+    margin: auto;
+    
+}
+.profile h2{
+    padding-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid grey;
+    border-radius: 5pc;
+    width: 100%;
+    text-align: center;
+    transition: all ease .5s;
+}
+
+.profile h2:hover{
+    background-color: #f0f0f0;
+    color: black;
+}
+
+#about{
+    margin-top: 10rem;
+    border: 5px solid rgb(209, 237, 160);
+}
+
+#work{
+    margin-top: 10rem;
+    background-color: #fff;
+    width: 100%;
+    border: 5px solid rgb(209, 237, 160);
+
+}
+.work h1 {
+    margin-bottom: 3rem;
+}
+
+
+/* Resposnsibilities  */
+
+.resp-card{
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    background-color: rgb(24, 24, 24);
+    transition: all ease .2s;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5rem;
+    padding-top: 0;
+}
+.resp-card:hover{
+    background-color: #222121;
+}
+.resp-card h2{
+    font-weight: 400;
+    font-size: 2.7rem;
+}
+.resp-card img{
+    border-radius: 5px;
+    height: 100%;
+    width: 20%;
+    aspect-ratio: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.resp-card p{
+    padding: 10px 20px;
+    text-align: left;
+    transition: all ease .5s;
+    align-content: center;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+.resp-card  ol {
+    list-style-type: decimal; /* Ensures numbers are displayed */
+    padding-left: 20px;       /* Adds space for alignment */
+  }
+/* .resp-card ul  li::marker {
+    font-size: 2em;       
+    margin-top: 5px;        
+  } */
+
+

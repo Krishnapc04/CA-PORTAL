@@ -7,6 +7,10 @@ import Profile from './Pages/Profile';
 import LoginForm from './Pages/Login';
 import Home from './Pages/Home';
 import Registrations from './Pages/Registrations';
+import About from './Pages/About';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 function HomePage() {
   return <h1>This is the Home Page</h1>;
@@ -25,6 +29,8 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/registrations" element={<Registrations />} />
+        <Route path="/about" element={<About />} />
+
       </Routes>
     </Router>
     </>

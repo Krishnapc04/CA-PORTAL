@@ -47,7 +47,8 @@ const SignupForm = () => {
     // Save user data along with expiry time in localStorage
     localStorage.setItem('CompositSaData', JSON.stringify({ ...data}));     
     localStorage.setItem('Satoken', data.token); 
-    navigate("/profile");
+    navigate("/");
+    window.location.reload();
       }
     } catch (error) {
       console.error("Error:", error.message);
@@ -60,7 +61,7 @@ const SignupForm = () => {
     <>
   
       <div
-        className="flex justify-center items-center min-h-screen bg-cover bg-center"
+        className="flex justify-center items-center min-h-screen bg-cover bg-center mt-20"
         style={{
           backgroundImage: "",
         }}
@@ -194,19 +195,6 @@ const SignupForm = () => {
                 value={formData.state}
                 onChange={handleChange}
                 placeholder="State"
-                className="w-full h-full bg-transparent text-white text-base pl-5 pr-10 py-3 border-2 border-white border-opacity-20 rounded-full focus:outline-none placeholder-white"
-              />
-              <i className="bx bxs-envelope absolute right-4 top-1/2 transform -translate-y-1/2 text-xl"></i>
-            </div>
-
-             {/* Referal */}
-             <div className="relative w-full h-12 mb-8">
-              <input
-                type="text"
-                name="referal"
-                value={formData.referal}
-                onChange={handleChange}
-                placeholder="Referal"
                 className="w-full h-full bg-transparent text-white text-base pl-5 pr-10 py-3 border-2 border-white border-opacity-20 rounded-full focus:outline-none placeholder-white"
               />
               <i className="bx bxs-envelope absolute right-4 top-1/2 transform -translate-y-1/2 text-xl"></i>
