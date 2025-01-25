@@ -3,6 +3,7 @@ import { Link , useNavigate} from "react-router-dom";
 import BaseUrl from "../const"
 
 const LoginForm = () => {
+  const [btnText, setbtnText] = useState("Login");
 
  const [formData, setFormData] = useState({
     email:"",
@@ -18,6 +19,7 @@ const LoginForm = () => {
     e.preventDefault();
 
     try {
+      setbtnText("Signing in...");
       const response = await fetch(`${BaseUrl}/api/user/login`, {
         method: "POST",
         headers: {
@@ -31,7 +33,7 @@ const LoginForm = () => {
       // console.log("Response:", data);
       if (response.ok) {
         console.log("user loged in successfully", data)
-
+        setbtnText("Login");
 
     // Save user data along with expiry time in localStorage
     localStorage.setItem('CompositSaData', JSON.stringify({ ...data}));     
@@ -89,7 +91,7 @@ const LoginForm = () => {
               type="submit"
               className="w-full h-12 bg-white text-gray-800 font-semibold rounded-full shadow-md hover:bg-opacity-10 hover:text-white transition duration-300"
             >
-              Login
+              {btnText}
             </button>
 
             <div className="text-sm text-center mt-6">

@@ -41,7 +41,7 @@ const FAQ = () => {
         {
           title: "What is the role of a Campus Ambassador?",
           content:
-            "Campus Ambassador will represent Kshitij, IIT Kharagpur in their colleges. They will be the first point of contact to any student who requires information about Kshitij. They would promote and motivate students to participate in the events conducted by Kshitij.",
+            "Campus Ambassador will represent COMPOSIT, IIT Kharagpur in their colleges. They will be the first point of contact to any student who requires information about COMPOSIT. They would promote and motivate students to participate in the events conducted by COMPOSIT.",
         },
         {
           title: "Am I suitable to become a Cam us Ambassador?",
@@ -64,7 +64,7 @@ const FAQ = () => {
             "One or more campus ambassadors are chosen depending on the size of the college and the number of students who have applied for the position. ",
         },
         {
-          title: "How much time do I need to devote to Kshitij, IIT Kharagpur once selected as a Campus Ambassador",
+          title: "How much time do I need to devote to COMPOSIT, IIT Kharagpur once selected as a Campus Ambassador",
           content:
             "There is no particular constraint on the number of hours per week that you need to devote. It may vary depending on the number of tasks allotted and how smartly and efficiently you perform it ",
         },

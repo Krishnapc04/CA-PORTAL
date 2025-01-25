@@ -4,6 +4,9 @@ import BaseUrl from "../const";
 
 const SignupForm = () => {
 
+    const [btnText, setbtnText] = useState("Sign Up");
+  
+
   const indianStates = {
     "Andhra Pradesh": "AP",
     "Arunachal Pradesh": "AR",
@@ -91,6 +94,7 @@ const SignupForm = () => {
     e.preventDefault();
 
     try {
+      setbtnText("Signing Up...");
       const response = await fetch(`${BaseUrl}/api/user/SaRegister`, {
         method: "POST",
         headers: {
