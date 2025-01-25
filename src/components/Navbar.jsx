@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
   const [UserId, setUserId] = useState(null);
-  
+  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
     const Data = JSON.parse(localStorage.getItem("CompositSaData"));
@@ -24,6 +24,7 @@ const Navbar = () => {
 
  const handleLogout = async (e) => {
   e.preventDefault();
+
   try {
     const response = await fetch(`${BaseUrl}/api/user/logout`, {
       method: 'POST',
@@ -39,6 +40,7 @@ const Navbar = () => {
       setIsLoggedIn(false);
       localStorage.clear();
       console.log("User LoggedOut SAuccessFully")
+      setShowMenu(false);
       navigate('/')
       window.location.reload();
     }
@@ -67,7 +69,7 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-                          className="text-gray-100 hover:text-[#c29a66] font-medium active:text-[#c29a66]"
+              className="text-gray-100 hover:text-[#c29a66] font-medium "
 
               to={"/about"}
             >
@@ -120,14 +122,17 @@ const Navbar = () => {
 
           </div>
 
+
+
+
+
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               type="button"
               className="text-[#fde4ae] hover:text-[#c29a66] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
               onClick={() => {
-                const menu = document.getElementById("mobile-menu");
-                menu.classList.toggle("hidden");
+                setShowMenu(!showMenu);
               }}
             >
               <svg
@@ -151,68 +156,62 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div
-        id="mobile-menu"
-        className=" md:hidden hidden bg-[#4b3926] text-center bg-opacity-10 backdrop-blur-lg shadow-2xl rounded-xl"
+      {showMenu && <div
+        // id="mobile-menu"
+        className="md:hidden bg-[#4b3926] text-center bg-opacity-10 backdrop-blur-lg shadow-2xl rounded-xl"
       >
         <div className="px-2 pt-2 pb-2 space-y-1">
           <Link
             to={"/"}
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-100 hover:bg-[#806240]"
+            onClick={()=>{setShowMenu(false)}}
           >
             Home
           </Link>
           <Link
             to={"/about"}
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-100 hover:bg-[#806240]"
+            onClick={()=>{setShowMenu(false)}}
           >
             About
           </Link>
-          <Link
-            to={"/events"}
+          
+          {isLoggedIn &&<Link
+            to={"/registrations"}
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-100 hover:bg-[#806240]"
+            onClick={()=>{setShowMenu(false)}}
+
           >
-            Events
-          </Link>
-          <Link
-            to={"/sponsers"}
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-100 hover:bg-[#806240]"
-          >
-            Sponsers
-          </Link>
-          <Link
-            to={"/team"}
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-100 hover:bg-[#806240]"
-          >
-            Team
-          </Link>
-          <Link
-            to={"/contact"}
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-100 hover:bg-[#806240]"
-          >
-            Contact
-          </Link>
-          <Link
+            My Registrations
+          </Link>}
+
+          {isLoggedIn && <Link
             to={"/profile"}
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-100 hover:bg-[#806240]"
+            onClick={()=>{setShowMenu(false)}}
+
           >
             Profile
-          </Link>
+          </Link>}
 
 
           
           {isLoggedIn ? (
-            <button onClick={handleLogout} className="block px-3 py-2 rounded-md text-base font-medium text-gray-100 hover:bg-[#806240]">Logout</button>
+            <button onClick={handleLogout} className="block px-3 py-2 rounded-md text-base font-medium text-gray-100 hover:bg-[#806240]">
+              Logout
+            </button>
            ) : (
              <Link
               to={"/signup"}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-100 hover:bg-[#806240]"
+              onClick={()=>{setShowMenu(false)}}
+
             >
               Register
             </Link>
           )}
         </div>
-      </div>
+      </div>}
     </nav>
   );
 };

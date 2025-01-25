@@ -46,6 +46,7 @@ const Registrations = () => {
         console.log("result recivied, ", result.members)
 
         setMembers(result.members || []); // Update members state
+        console.log(members)
         setLoading(false);
       } catch (error) {
         setError(error.message);
@@ -60,18 +61,18 @@ const Registrations = () => {
   }, [location]); // Re-run fetch whenever the route changes
 
   if (loading) {
-    return <p className="text-white text-2xl">Loading registrations...</p>;
+    return <p className="text-white text-2xl mt-20">Loading registrations...</p>;
   }
 
   if (error) {
-    return <p className="text-white text-2xl">Error: {error}</p>;
+    return <p className="text-white text-2xl mt-20">Error: {error}</p>;
   }
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Registrations:</h1>
+    <div className="p-4 mt-20 w-full " >
+      <h1 className="text-2xl text-center  font-bold text-white mb-5">Registrations:</h1>
       {members.length > 0 ? (
-        <table className="w-full border-collapse border border-gray-300 text-white">
+        <table className="w-full border-collapse border border-gray-300 text-white absolute left-2 px-3 mr-2">
           <thead>
             <tr>
               <th className="border border-gray-300 px-4 py-2">Registration ID</th>
@@ -82,10 +83,10 @@ const Registrations = () => {
           <tbody>
             {members.map((member, index) => (
               <tr key={index} className="text-center">
-                <td className="border border-gray-300 px-4 py-2">{member.MemberId}</td>
-                <td className="border border-gray-300 px-4 py-2">{member.MemberName}</td>
+                <td className="border border-gray-300 px-4 py-2">{member._id}</td>
+                <td className="border border-gray-300 px-4 py-2">{member.name}</td>
                 <td className="border border-gray-300 px-4 py-2">
-                  {new Date(member.timestamps).toLocaleDateString()}
+                  {new Date(member.updatedAt).toLocaleDateString()}
                 </td>
               </tr>
             ))}

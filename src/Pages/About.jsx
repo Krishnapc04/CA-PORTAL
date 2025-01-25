@@ -12,7 +12,7 @@ const About = () => {
 
 
   return (
-    <div className='text-white mt-20 flex flex-col gap-5 w-3/4 m-auto border-2 px-10 py-7' id='about'>
+    <div className='text-white mt-20 flex flex-col gap-5 w-full m-auto border-2 px-5 py-7 md:w-3/4 sm:px-10' id='about'>
       <h1 className='text-5xl mb-3 font-bold'>About Us</h1>
     {/* <p className='text-lg'> */}
     <BlurText
@@ -22,7 +22,7 @@ delay={100}
 animateBy="words"
 direction="top"
 onAnimationComplete={handleAnimationComplete}
-className="text-2xl mb-8"
+className="text-sm sm:text-md md:text-2xl mb-8"
 />
        
     </div>

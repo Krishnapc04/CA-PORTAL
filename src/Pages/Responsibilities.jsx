@@ -9,39 +9,7 @@ import SpotlightCard from "../components/SpotLightCard";
 import { useState } from "react";
 import "./Style.css";
 
-const Card = (props)=>{
-  const ref = useRef(null); // Reference for the element
-  const isInView = useInView(ref, { once: true });
-  return (
-    <>
-       <motion.div
-        ref={ref} // Attach the ref to the motion.div
-        className="resp-card py-4 mb-20"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-        transition={{
-          duration: 0.4,
-          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
-        }}
-      >
-    <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
 
-        <h2 className="text-2xl">{props.work}</h2>
-        <div className={`flex justify-evenly mt-8 h-fit ${props.position}`}>
-          <img
-            src={props.img}
-            alt="profile"
-            className="w-1/4 object-cover pl-3 pb-3 mb-3"
-          />
-          <p className="text-2xl w-1/4">{props.description}</p>
-        </div>
-    </SpotlightCard>
-      </motion.div>
-
-    </>
-  );
-
-}
 
 const NewCard = ( )=>{
   const ref = useRef(null); // Reference for the element
@@ -61,12 +29,14 @@ const NewCard = ( )=>{
 <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
 
   <ol >
-    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aspernatur distinctio architecto porro. Distinctio blanditiis soluta consequuntur modi commodi ratione?</p></li>
-    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aspernatur distinctio architecto porro. Distinctio blanditiis soluta consequuntur modi commodi ratione?</p></li>
-    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aspernatur distinctio architecto porro. Distinctio blanditiis soluta consequuntur modi commodi ratione?</p></li>
-    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aspernatur distinctio architecto porro. Distinctio blanditiis soluta consequuntur modi commodi ratione?</p></li>
-    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aspernatur distinctio architecto porro. Distinctio blanditiis soluta consequuntur modi commodi ratione?</p></li>
-    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aspernatur distinctio architecto porro. Distinctio blanditiis soluta consequuntur modi commodi ratione?</p></li>
+    <li><p>Act as a vital link between COMPOSIT, IIT Kharagpur, and your college, ensuring seamless communication and collaboration.</p></li>
+    <li><p>Encourage and ensure active participation of students from your college in various events, workshops, and competitions.</p></li>
+    <li><p>Publicize COMPOSIT and its events within your college, spreading awareness and excitement about the fest.</p></li>
+    <li><p>Promote COMPOSIT's initiatives through social media platforms and word-of-mouth campaigns.
+    </p></li>
+    <li><p>Represent your college at COMPOSIT and showcase its talent on a prestigious platform.
+    </p></li>
+    {/* <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aspernatur distinctio architecto porro. Distinctio blanditiis soluta consequuntur modi commodi ratione?</p></li> */}
   </ol>
     
 </SpotlightCard>

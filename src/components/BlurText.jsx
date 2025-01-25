@@ -71,7 +71,7 @@ const springs = useSprings(
 );
 
 return (
-  <p ref={ref} className={`blur-text ${className} flex text-center flex-wrap`}>
+  <p ref={ref} className={`blur-text ${className} flex text-center flex-wrap `}>
     {springs.map((props, index) => (
       <animated.span
         key={index}
