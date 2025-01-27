@@ -62,8 +62,8 @@ const Benifities = () => {
    <h2 className='text-4xl mt-10 text-yellow-300 font-bold'>Benifities of Campus Ambassador</h2>
    <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-2 mt-10 '>
     <Card  img="/images/Benifities/certi.png" icon={PiCertificate} description="Receive a prestigious certificate signed by the Head of the Department, IIT Kharagpur, as recognition for your efforts." />
-    <Card  img="/images/new1.jpg" icon={RiDiscountPercentFill} description="Get special discounts on accommodation during the fest, based on the number of registrations you bring" />
-    <Card  img="/images/new1.jpg" icon={HiUserGroup} description="Build valuable connections with IIT KGP professors and students, enhancing your academic and professional network" />
+    <Card  img="/images/new1.jpg" icon={RiDiscountPercentFill} description="Get special discounts on accommodation during the fest, based on the number of registrations you bring." />
+    <Card  img="/images/new1.jpg" icon={HiUserGroup} description="Build valuable connections with IIT KGP professors and students, enhancing your academic and professional network." />
     <Card  img="/images/new1.jpg"  icon={MdSocialDistance} description="Get featured in a special post on all official COMPOSIT social media handles if you rank among the top 20 ambassadors." />
     <Card  img="/images/new1.jpg" icon={FaGifts} description="Enjoy exciting goodies and gifts as a token of appreciation after the fest." />
     {/* <Card  img="/images/new1.jpg" description="To act as a bridge between COMPOSIT, IIT Kharagpur and your respective college" /> */}

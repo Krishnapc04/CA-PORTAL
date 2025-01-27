@@ -184,7 +184,7 @@ const SignupForm = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="Phone no."
+                placeholder="Phone No."
                 className="w-full h-full bg-transparent text-white text-base pl-5 pr-10 py-3 border-2 border-white border-opacity-20 rounded-full focus:outline-none placeholder-white"
               />
               <i className="bx bxs-envelope absolute right-4 top-1/2 transform -translate-y-1/2 text-xl"></i>
@@ -249,7 +249,7 @@ const SignupForm = () => {
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
-                placeholder="city"
+                placeholder="City"
                 className="w-full h-full bg-transparent text-white text-base pl-5 pr-10 py-3 border-2 border-white border-opacity-20 rounded-full focus:outline-none placeholder-white"
               />
               <i className="bx bxs-envelope absolute right-4 top-1/2 transform -translate-y-1/2 text-xl"></i>

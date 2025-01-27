@@ -56,7 +56,7 @@ const FAQ = () => {
         {
           title: "What is the selection process?",
           content:
-            "After you register through our website, you will have to go through a short telephonic interview before being selected ",
+            "After you register through our website, you will have to go through a short telephonic interview before being selected. ",
         },
         {
           title: "How many Campus Ambassadors are usually chosen from a particular college?",
@@ -66,7 +66,7 @@ const FAQ = () => {
         {
           title: "How much time do I need to devote to COMPOSIT, IIT Kharagpur once selected as a Campus Ambassador",
           content:
-            "There is no particular constraint on the number of hours per week that you need to devote. It may vary depending on the number of tasks allotted and how smartly and efficiently you perform it ",
+            "There is no particular constraint on the number of hours per week that you need to devote. It may vary depending on the number of tasks allotted and how smartly and efficiently you perform it. ",
         },
         
       ];
