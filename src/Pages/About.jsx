@@ -18,7 +18,7 @@ const About = () => {
     <BlurText
 text="
 COMPOSIT (Congress of Metallurgical Professionals involving Students, Industry, and Teachers) is one of India’s largest materials science fests, organized by the Society of Metallurgical Engineers, IIT Kharagpur. Since its inception in 1994, it has been a premier platform for students, professionals, and academicians to explore innovations, share expertise, and celebrate advancements in materials science. With a mission to inspire and connect bright minds, COMPOSIT fosters knowledge-sharing, talent showcasing, and interaction with industry stalwarts, promising an exciting journey of events and opportunities for aspiring enthusiasts."
-delay={100}
+delay={80}
 animateBy="words"
 direction="top"
 onAnimationComplete={handleAnimationComplete}

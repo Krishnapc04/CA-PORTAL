@@ -113,11 +113,13 @@ const SignupForm = () => {
     // Save user data along with expiry time in localStorage
     localStorage.setItem('CompositSaData', JSON.stringify({ ...data}));     
     localStorage.setItem('Satoken', data.token); 
+    setbtnText("Sign Up");
     navigate("/");
     window.location.reload();
       }
     } catch (error) {
       console.error("Error:", error.message);
+      setbtnText("Sign Up");
     }
   };
 
@@ -321,7 +323,7 @@ const SignupForm = () => {
               type="submit"
               className="w-full h-12 bg-white text-gray-800 font-semibold rounded-full shadow-md hover:bg-opacity-10 hover:text-white transition duration-300"
             >
-              Sign Up
+              {btnText}
             </button>
 
             {/* Login Link */}

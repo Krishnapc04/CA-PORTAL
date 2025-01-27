@@ -8,6 +8,38 @@
     margin: auto;
     
 }
+
+.mainbg{
+    background-color: rgb(3, 29, 67);
+    position: fixed;
+    top: 0;
+    background-image: url("../../public/images/mainbg.jpeg");
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    opacity: .5;
+    margin: 0;
+    
+    filter: blur(3px); /* Blurs the background image */
+    backdrop-filter: blur(5px); /* Applies blur behind content (modern browsers only) */
+    -webkit-backdrop-filter: blur(5px); /* For Safari support */
+}
+
+.mainbg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black layer */
+    z-index: 0;
+}
+
+
 .profile h2{
     padding-top: 20px;
     padding: 10px 20px;
@@ -53,6 +85,7 @@
     margin: auto;
     margin-bottom: 5rem;
     padding-top: 0;
+    justify-content: center;
 }
 .resp-card:hover{
     background-color: #222121;

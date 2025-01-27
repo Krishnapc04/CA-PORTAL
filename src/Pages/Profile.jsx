@@ -6,7 +6,8 @@ const Profile = () => {
     console.log(Data.user.userData)
     const user = Data.user.userData;
   return (
-    <div className='mt-20 text-white'>
+    <div className='mt-28 text-white'>
+      <h1 className='text-3xl font-bold text-yellow-300 mb-10 mt-10'> Your Profile </h1>
       <div className='mt-14 h-full flex flex-col gap-5 justify-items-start text-center profile '>
         <h2> <b>Name </b> : {user.name}</h2>
         <h2><b>Student Ambassador Id : </b> {user.SaId} </h2>

@@ -8,11 +8,11 @@ const Accordion = ({ items }) => {
     };
   
     return (
-      <div className="w-full  mx-auto mt-10 space-y-4">
+      <div className="w-full  mx-auto mt-10 space-y-4 ">
         {items.map((item, index) => (
           <div
             key={index}
-            className="border border-gray-300 rounded-lg shadow-sm"
+            className="border border-gray-300 rounded-lg shadow-sm bg-gray-800 hover:bg-gray-700 "
           >
             <div
               className="flex justify-between items-center px-4 py-3 cursor-pointer  "
@@ -25,7 +25,7 @@ const Accordion = ({ items }) => {
             </div>
             {activeIndex === index && (
               <div className="px-4 py-3 bg-slate-800" >
-                <p className="text-white-700 text-left">{item.content}</p>
+                <p className="text-white-700 text-left text-xl">{item.content}</p>
               </div>
             )}
           </div>
@@ -44,7 +44,7 @@ const FAQ = () => {
             "Campus Ambassador will represent COMPOSIT, IIT Kharagpur in their colleges. They will be the first point of contact to any student who requires information about COMPOSIT. They would promote and motivate students to participate in the events conducted by COMPOSIT.",
         },
         {
-          title: "Am I suitable to become a Cam us Ambassador?",
+          title: "Am I suitable to become a Campus Ambassador?",
           content:
             "Yes. Any college student driven with enthusiasm is eligible to become a Campus Ambassador.",
         },
@@ -73,8 +73,8 @@ const FAQ = () => {
 
 
   return (
-    <div>
-    <h2 className='mt-20 text-3xl'>Frequently Asked Questions</h2>
+    <div className='p-6'>
+    <h2 className='mt-20 text-3xl font-bold text-yellow-300'>Frequently Asked Questions</h2>
  
         <Accordion items={accordionItems} />
     </div>

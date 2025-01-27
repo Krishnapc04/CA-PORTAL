@@ -51,7 +51,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 p-1 left-0 w-full bg-[#95a316ed 2f] bg-#312e2e shadow-xl z-50" style={{backgroundColor:"#312e3e"}} >
+    <nav className="fixed top-0 p-1 left-0 w-full bg-[#95a316ed 2f] bg-#312e2e shadow-xl z-50" style={{backgroundColor:"#252527"}} >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -95,7 +95,7 @@ const Navbar = () => {
             </Link>}
 
             <Link
-              to={"/contact"}
+              to="/#contact"
               className="text-gray-100 hover:text-[#c29a66] font-medium"
             >
               Contact

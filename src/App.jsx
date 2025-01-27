@@ -8,6 +8,8 @@ import LoginForm from './Pages/Login';
 import Home from './Pages/Home';
 import Registrations from './Pages/Registrations';
 import About from './Pages/About';
+import "./Pages/Style.css";
+import ScrollToSection from './components/ScrollToSection';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -22,7 +24,10 @@ function App() {
   return (
     <>
      <Router>
+      <ScrollToSection/>
       <Navbar/>
+      {/* <div className='mainbg mt-32'>
+      </div> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignupForm />} />
@@ -32,7 +37,7 @@ function App() {
         <Route path="/about" element={<About />} />
 
       </Routes>
-    </Router>
+    </Router> 
     </>
   )
 }
