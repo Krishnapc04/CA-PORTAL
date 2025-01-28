@@ -11,3 +11,10 @@ body{
     height: 100vh;
     margin: 0;
 }
+
+@media (width<500px){
+    body{
+    padding-left: 15px;
+        padding-right: 15px;
+    }
+}

@@ -103,12 +103,13 @@
     margin-top: 0;
     padding-top: 0;
     margin: auto;
+    padding-right: 10px;
 }
 
 .resp-card p{
     padding: 10px 10px;
     text-align: left;
-    padding-left: 20px;
+    padding-left: 10px;
     transition: all ease .5s;
     align-content: center;
     font-size: 1.1rem;
@@ -117,7 +118,7 @@
 
 .resp-card  ol {
     list-style-type: decimal; /* Ensures numbers are displayed */
-    padding-left: 20px;       /* Adds space for alignment */
+    padding-left: 15px;       /* Adds space for alignment */
   }
 /* .resp-card ul  li::marker {
     font-size: 2em;       
@@ -134,7 +135,7 @@
 /* Responsive Styles */
 
 @media (max-width: 700px) {
-    .resp-card p {
+    .resp-card p, ol {
         font-size: 1rem;
     }
     .home-info {
@@ -142,10 +143,13 @@
         /* font-size: 2rem; */
         width: 90%;
     }
+    .benifite-desp{
+        font-size: 1.5rem !important;
+    }
 }
 
 @media (max-width: 500px) {
-    .resp-card p{
+    .resp-card p, ol{
         font-size: .8rem;
     }
     .resp-card{
@@ -162,9 +166,12 @@
         width: 30%;
         padding: 10px 0;
     }
+    .benifite-desp{
+        font-size: 1rem !important;
+    }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 450px) {
     .home-info {
         font-size: 1.3rem;
     }

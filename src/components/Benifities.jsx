@@ -42,7 +42,7 @@ const Card = (props)=>{
               alt="profile"
               className="w-1/2 object-cover pl-3 pb-3 m-auto mb-3 "
             /> */}
-            <p className="w-full text-center ">{props.description}</p>
+            <p className="w-full text-center benifite-desp">{props.description}</p>
           </div>
       </SpotlightCard>
         </motion.div>
