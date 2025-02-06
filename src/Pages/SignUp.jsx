@@ -62,6 +62,8 @@ const SignupForm = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  
   const handleStateChange = (e) => {
     const { value } = e.target;
     setFormData({ ...formData, state: value });
@@ -79,15 +81,19 @@ const SignupForm = () => {
     }
   };
 
-  const handleSelectState = (state) => {
+  const handleSelectState = (e) => {
+    const { value } = e.target;
+    console.log(value)
     setFormData({
       ...formData,
-      state: state,
-      abbrivation: indianStates[state], // Save abbreviation
+      state: value,
+      abbrivation: indianStates[`${value}`], // Save abbreviation
     });
     setShowDropdown(false); // Close dropdown after selection
   };
-
+console.log(indianStates)
+console.log(indianStates["Maharashtra"])
+  console.log(formData)
 
    // Handle form submission
    const handleSubmit = async (e) => {
@@ -269,7 +275,7 @@ const SignupForm = () => {
               <i className="bx bxs-envelope absolute right-4 top-1/2 transform -translate-y-1/2 text-xl"></i>
             </div> */}
 
-<div className="relative w-full h-12 mb-16">
+{/* <div className="relative w-full h-12 mb-16">
       <input
         type="text"
         name="state"
@@ -279,7 +285,6 @@ const SignupForm = () => {
         className="w-full h-full bg-transparent text-white text-base pl-5 pr-10 py-3 border-2 border-white border-opacity-20 rounded-full focus:outline-none placeholder-white"
       />
       <i className="bx bxs-map-pin absolute right-4 top-1/2 transform -translate-y-1/2 text-xl"></i>
-      {/* Dropdown */}
       {showDropdown && filteredStates.length > 0 && (
         <ul className="absolute left-0 w-full bg-gray-800 border border-gray-600 mt-2 rounded-md max-h-48 overflow-y-auto z-10">
           {filteredStates.map((state, index) => (
@@ -293,20 +298,23 @@ const SignupForm = () => {
           ))}
         </ul>
       )}
-
-      {/* Display selected state and abbreviation */}
-      {/* {formData.state && (
-        <div className="mt-4 text-white">
-          <p>
-            Selected State: <strong>{formData.state}</strong>
-          </p>
-          <p>
-            Abbreviation: <strong>{formData.abbreviation}</strong>
-          </p>
-        </div>
-      )} */}
     </div>
-
+     */}
+    <div className="relative w-full h-12 mb-8">
+  <select
+    name="state"
+    value={formData.state}
+    onChange={handleSelectState}
+    className="w-full h-full bg-transparent text-white text-base pl-5 pr-10 py-3 border-2 border-white border-opacity-20 rounded-full focus:outline-none"
+  >
+    <option value="" disabled>Select State</option>
+    {Object.keys(indianStates).map((state) => (
+      <option key={state} value={state} className="text-white bg-black">
+        {state}
+      </option>
+    ))}
+  </select>
+</div>
 
 
             {/* Confirm Password */}
